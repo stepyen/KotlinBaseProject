@@ -21,15 +21,15 @@ public class HandlerUtil {
         return instance;
     }
 
-    public void postTask(Runnable task) {
-        mHandler.post(task);
+    public static void postTask(Runnable task) {
+        getInstance().mHandler.post(task);
     }
 
-    public void postTaskDelay(Runnable task, long delayMillis) {
-        mHandler.postDelayed(task, delayMillis);
+    public static void postTaskDelay( long delayMillis,Runnable task) {
+        getInstance().mHandler.postDelayed(task, delayMillis);
     }
 
-    public void removeTask(Runnable task) {
-        mHandler.removeCallbacks(task);
+    public static void removeTask(Runnable task) {
+        getInstance().mHandler.removeCallbacks(task);
     }
 }
