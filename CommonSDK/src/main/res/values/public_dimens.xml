@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--文字大小-->
+    <dimen name="public_big_title">18dp</dimen>
+    <dimen name="public_title">15sp</dimen>
+    <dimen name="public_subtitle">14sp</dimen>
+    <dimen name="public_content">13sp</dimen>
+    <dimen name="public_explain">12sp</dimen>
+    <dimen name="public_small">11sp</dimen>
+    <dimen name="public_little">10sp</dimen>
+    <dimen name="public_very_little">9sp</dimen>
+
+    <dimen name="public_hint">13sp</dimen>
+
+    <dimen name="public_dialog_text">17dp</dimen>
+    <dimen name="public_dialog_content">13dp</dimen>
+    <dimen name="public_button">15dp</dimen>
+    <dimen name="public_time">11dp</dimen>
+
+    <dimen name="public_padding">15dp</dimen>
+    <dimen name="public_margin">15dp</dimen>
+    <dimen name="public_line">0.5dp</dimen>
+    <dimen name="public_item">47dp</dimen>
+    <dimen name="public_item_space">10dp</dimen>
+
+
+    <dimen name="public_radius_5">5dp</dimen>
+    <dimen name="public_radius_3">3dp</dimen>
+    <dimen name="public_radius_2">2dp</dimen>
+
+
+    <dimen name="public_option_height">45dp</dimen>
+    <dimen name="public_option_leftKeyValue_height">24dp</dimen>
+    <dimen name="public_option_keyValue_height">33dp</dimen>
+
+
+    <dimen name="publick_content_padding_vertical">7dp</dimen>
+
+
+
+</resources>

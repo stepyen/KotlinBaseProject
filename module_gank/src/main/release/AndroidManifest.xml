@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.stepyen.module.gank">
+
+    <application>
+        <activity
+            android:name=".GankMainActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait">
+        </activity>
+        <meta-data
+            android:name="com.stepyen.module.gank.app.GlobalConfiguration"
+            android:value="ConfigModule"/>
+
+    </application>
+
+
+</manifest>

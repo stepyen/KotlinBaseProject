@@ -1,0 +1,1 @@
+include ':app', ':xpay_lib', ':CommonSDK', ':umlibrary', ':CommonService', ':module_gank', ':module_zhihu'

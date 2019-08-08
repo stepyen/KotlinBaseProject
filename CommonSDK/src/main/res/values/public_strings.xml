@@ -1,0 +1,16 @@
+<resources>
+    <string name="public_app_name">common</string>
+
+    <!--预留位置 %1$s-->
+
+
+
+
+    <string name="public_empty_text">暂无内容</string>
+    <string name="public_request_error">服务器出了点小状况~</string>
+    <string name="public_net_error">网络开小差啦~</string>
+    <string name="public_load_again">重新加载</string>
+
+    <string name="public_money">%.2f</string>   <!--金额保留两位小数-->
+
+</resources>

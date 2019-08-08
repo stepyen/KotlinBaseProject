@@ -1,0 +1,124 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode build_versions.build_version_code
+        versionName build_versions.build_version_name
+
+    }
+
+    resourcePrefix "public_"
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // 基础框架
+    api 'com.github.stepyen.XFrame:xframe_lib:1.0.8'
+    // glide 图片实现策略
+    api 'com.github.stepyen.XFrame:xframe_glide:1.0.8'
+
+    // 工具
+    api 'com.github.stepyen.XUtil:xutil-core:1.0.6'
+    api 'com.github.stepyen.XUtil:xutil-sub:1.0.6'
+
+    // UI
+    api 'com.github.stepyen:XUI:1.3.12'
+
+    // 6.0权限请求
+    api 'com.qw:soulpermission:1.1.7'
+
+    //版本更新
+    api 'com.github.xuexiangjys:XUpdate:1.0.9'
+    // 网络请求框架，为了写版本更新请求接口
+    implementation 'com.zhy:okhttputils:2.6.2'
+
+    // 解决 retrofit 动态修改baseurl问题
+    api deps.retrofit_url_manager
+
+    // 路由框架
+    api(deps.arouter.api) {
+        exclude module: 'support-v4'
+        exclude module: 'support-annotations'
+    }
+
+
+
+    // 消息通信
+    api deps.androideventbus
+
+    // 图片显示
+    api (deps.glide) {
+        exclude group: "com.android.support"
+    }
+
+    // 支付宝、微信支付
+    implementation project(":xpay_lib")
+
+    // 友盟分享、登录
+    implementation project(":umlibrary")
+    api deps.multidex
+
+
+
+
+//------UI------------------------------------------------------
+    api deps.constraint_layout
+    api(deps.support.cardview) {
+        exclude module: 'support-annotations'
+    }
+
+    // recycleview adapter
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+    //弹性布局
+    implementation 'com.google.android:flexbox:0.3.1'
+
+    // 状态栏
+    api 'com.gyf.immersionbar:immersionbar:3.0.0-beta05'
+
+    // 分页
+
+    // 下拉刷新
+
+    // 图片选择
+    
+    // 图片查看
+
+    // 屏幕适配
+
+    // 选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+
+
+    api"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api 'androidx.appcompat:appcompat:1.0.2'
+    api 'androidx.core:core-ktx:1.0.2'
+    api 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+}
+repositories {
+    mavenCentral()
+}

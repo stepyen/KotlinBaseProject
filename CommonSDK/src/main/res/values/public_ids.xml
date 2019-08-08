@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <item name="public_radiobutton_id_wechat" type="id" />
+    <item name="public_radiobutton_id_alipay" type="id" />
+
+
+</resources>

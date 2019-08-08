@@ -1,0 +1,5 @@
+<root>
+    <item name='com.umeng.socialize.UMAuthListener'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+
+
+dependencies {
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+
+    // 支付宝sdk
+    implementation (name: 'alipaySdk-15.6.4-20190611174359-noUtdid', ext: 'aar')
+    // 微信sdk
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.4'
+
+}
+apply from: '../JitPackUpload.gradle'
+repositories {
+    mavenCentral()
+}
