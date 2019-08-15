@@ -1,11 +1,9 @@
-package com.stepyen.kotlinbaseproject.widget
+package com.stepyen.commonsdk.widget
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-import butterknife.ButterKnife
-import com.stepyen.kotlinbaseproject.util.getImageLoader
 import com.stepyen.xframe.http.imageloader.ImageLoader
 import com.stepyen.xframe.utils.XFrameUtils
 
@@ -20,7 +18,7 @@ abstract class BaseFrameLayout : FrameLayout {
     lateinit var mContext: Context
     lateinit var mView: View
     val mImageLoader: ImageLoader by lazy {
-        getImageLoader(mContext)
+        XFrameUtils.obtainAppComponentFromContext(context).imageLoader()
     }
 
     constructor(context: Context) : super(context, null)
@@ -30,7 +28,6 @@ abstract class BaseFrameLayout : FrameLayout {
 
         mView = XFrameUtils.inflate(context, getLayoutId())
         addView(mView)
-        ButterKnife.bind(this, mView)
         init(attrs, defStyle)
     }
 
