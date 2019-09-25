@@ -8,6 +8,8 @@
     <color name="public_explain">#7D8389</color>
     <color name="public_litter">#A8ACB8</color>
 
+    <color name="public_image_error">#A8ACB8</color>
+
 
     <color name="public_hint">#808698</color>
     <color name="public_background">#E4E8F3</color>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--OptionItem Style attr-->
+    <attr name="CommonOptionItemStyle" format="reference"></attr>
+    <attr name="OptionItemStyle" format="reference"></attr>
+    <attr name="OptionItemStyleLeftString" format="reference"></attr>
+    <attr name="OptionItemStyleRightArrow" format="reference"></attr>
+    <attr name="OptionItemStyleRightArrowLeftTvHasRightDrawable" format="reference"></attr>
+    <attr name="OptionItemStyleKeyValue" format="reference"></attr>
+    <attr name="OptionItemStyleKeyValueLeftColorBigTitle" format="reference"></attr>
+    <attr name="OptionItemStyleKeyValueLeftColorBigTitleRightColorSubtile" format="reference"></attr>
+    <attr name="OptionItemStyleRightEditText" format="reference"></attr>
+    <attr name="OptionItemStylerightEditTextrightTextView" format="reference"></attr>
+
+    <attr name="OptionItemTitleValueStyle" format="reference"></attr>
+</resources>

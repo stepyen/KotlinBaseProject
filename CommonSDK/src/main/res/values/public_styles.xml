@@ -36,6 +36,61 @@
         <item name="android:background">@color/public_line</item>
     </style>
 
+<!--    红底白字-->
+    <style name="PublicTextStyle.red">
+        <item name="android:textColor">@color/public_white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="sSolidColor">@color/public_red</item>
+        <item name="sCornersRadius">@dimen/public_radius_5</item>
+    </style>
+
+<!--   红底白字 提交 -->
+    <style name="PublicTextStyle.red.Commit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginLeft">@dimen/public_margin</item>
+        <item name="android:layout_marginRight">@dimen/public_margin</item>
+
+    </style>
+
+    <style name="PublicTextStyle.red.tag">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:textSize">@dimen/public_explain</item>
+    </style>
+
+    <style name="PublicTextStyle.white">
+        <item name="android:textColor">@color/public_red</item>
+        <item name="sSolidColor">@color/public_white</item>
+        <item name="sCornersRadius">@dimen/public_radius_5</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="PublicTextStyle.white.Commit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginLeft">@dimen/public_margin</item>
+        <item name="android:layout_marginRight">@dimen/public_margin</item>
+
+    </style>
 
 
+    <style name="PublicTextStyle.pink">
+        <item name="android:textColor">@color/public_red</item>
+        <item name="android:textSize">@dimen/public_little</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:paddingRight">7dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="sCornersRadius">@dimen/public_radius_3</item>
+        <item name="sSolidColor">@color/public_pink</item>
+    </style>
+
+    <style name="PublicTextStyle.pink.Commit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="sStrokeWidth">1dp</item>
+        <item name="sStrokeColor">@color/public_red</item>
+    </style>
 </resources>

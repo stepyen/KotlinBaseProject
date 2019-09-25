@@ -6,6 +6,137 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+
+        <item name="CommonOptionItemStyle">@style/CommonOptionItemStyle</item>
+        <item name="OptionItemStyle">@style/OptionItemStyle</item>
+        <item name="OptionItemStyleLeftString">@style/OptionItemStyle.LeftString</item>
+        <item name="OptionItemStyleRightArrow" >@style/OptionItemStyle.RightArrow</item>
+        <item name="OptionItemStyleRightArrowLeftTvHasRightDrawable" >@style/OptionItemStyle.RightArrow.LeftTvHasRightDrawable</item>
+        <item name="OptionItemStyleKeyValue" >@style/OptionItemStyle.KeyValue</item>
+        <item name="OptionItemStyleKeyValueLeftColorBigTitle" >@style/OptionItemStyle.KeyValue.LeftColorBigTitle</item>
+        <item name="OptionItemStyleKeyValueLeftColorBigTitleRightColorSubtile">@style/OptionItemStyle.KeyValue.LeftColorBigTitle.RightColorSubtile</item>
+        <item name="OptionItemStyleRightEditText">@style/OptionItemStyle.rightEditText</item>
+        <item name="OptionItemStylerightEditTextrightTextView" >@style/OptionItemStyle.rightEditText.rightTextView</item>
+
+        <item name="OptionItemTitleValueStyle" >@style/OptionItemTitleValueStyle</item>
+    </style>
+
+
+    <style name="OptionItemTitleValueStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">33dp</item>
+        <item name="opkv_title_size">@dimen/public_subtitle</item>
+        <item name="opkv_title_color">@color/public_subtitle</item>
+        <item name="opkv_value_size">@dimen/public_subtitle</item>
+        <item name="opkv_value_color">@color/public_big_title</item>
+        <item name="opkv_title_value_space">8dp</item>
+
+    </style>
+
+    <style name="CommonOptionItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+
+        <item name="sLeftTextSize">@dimen/public_title</item>
+        <item name="sLeftTextColor">@color/public_title</item>
+        <item name="sLeftViewMarginLeft">@dimen/public_margin</item>
+
+        <item name="sRightTvDrawableRight">@drawable/ic_gray_right</item>
+        <item name="sRightTvDrawableWidth">8dp</item>
+        <item name="sRightTvDrawableHeight">16dp</item>
+        <item name="sRightViewMarginRight">@dimen/public_margin</item>
+
+        <item name="sRightTextSize">@dimen/public_title</item>
+        <item name="sRightTextColor">@color/public_big_title</item>
+
+        <item name="sDividerLineType">bottom</item>
+        <item name="sDividerLineColor">@color/public_line</item>
+        <item name="sBottomDividerLineMarginLR">@dimen/public_margin</item>
+
+
+    </style>
+
+    <style name="OptionItemStyle.RadioButton">
+        <item name="sRightRadioButtonRes">@drawable/select_radio_button</item>
+        <item name="sRightViewType">radioButton</item>
+    </style>
+
+    <!--OptionItem 左边文字，下面分割线-->
+    <style name="OptionItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+
+        <item name="sLeftTextSize">@dimen/public_title</item>
+        <item name="sLeftTextColor">@color/public_title</item>
+        <item name="sLeftViewMarginLeft">@dimen/public_margin</item>
+
+        <item name="sDividerLineType">bottom</item>
+        <item name="sDividerLineColor">@color/public_line</item>
+        <item name="sBottomDividerLineMarginLR">@dimen/public_margin</item>
+
+    </style>
+
+    <style name="OptionItemStyle.LeftString">
+        <item name="sLeftViewMarginLeft">0dp</item>
+
+        <item name="sDividerLineType">none</item>
+    </style>
+
+
+    <!--有右边箭头-->
+    <style name="OptionItemStyle.RightArrow">
+
+        <item name="sRightTvDrawableRight">@drawable/ic_gray_right</item>
+        <item name="sRightTvDrawableWidth">8dp</item>
+        <item name="sRightTvDrawableHeight">16dp</item>
+
+        <item name="sRightViewMarginRight">@dimen/public_margin</item>
+
+        <item name="sRightTextSize">@dimen/public_title</item>
+        <item name="sRightTextColor">@color/public_big_title</item>
+
+    </style>
+
+    <style name="OptionItemStyle.RightArrow.LeftTvHasRightDrawable">
+        <item name="sLeftTvDrawableRight">@drawable/ic_insurance_explain</item>
+        <item name="sLeftTvDrawableHeight">15dp</item>
+        <item name="sLeftTvDrawableWidth">15dp</item>
+        <item name="sTextViewDrawablePadding">10dp</item>
+    </style>
+
+
+    <style name="OptionItemStyle.KeyValue">
+
+        <item name="sLeftTextSize">@dimen/public_subtitle</item>
+        <item name="sLeftTextColor">@color/public_subtitle</item>
+        <item name="sRightTextSize">@dimen/public_subtitle</item>
+        <item name="sRightTextColor">@color/public_big_title</item>
+    </style>
+
+    <style name="OptionItemStyle.KeyValue.LeftColorBigTitle">
+        <item name="sLeftTextColor">@color/public_big_title</item>
+    </style>
+
+    <style name="OptionItemStyle.KeyValue.LeftColorBigTitle.RightColorSubtile">
+        <item name="sRightTextColor">@color/public_subtitle</item>
+    </style>
+
+
+    <style name="OptionItemStyle.rightEditText">
+        <item name="sEnableEdit">true</item>
+        <item name="sEditTextButtonType">none</item>
+        <item name="sEditTextGravity">right</item>
+        <item name="sRightViewMarginRight">@dimen/public_margin</item>
+        <item name="sCenterViewGravity">left_center</item>
+        <item name="sRightViewMarginLeft">0dp</item>
+        <item name="sEditTextHint">请输入</item>
+
+    </style>
+
+    <style name="OptionItemStyle.rightEditText.rightTextView">
+        <item name="sRightViewMarginLeft">10dp</item>
+
     </style>
 
 </resources>

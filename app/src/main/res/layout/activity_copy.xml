@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+<!--         ViewPager 和  TabSegment   -->
+            <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                  />
+
+            <com.stepyen.xui.widget.tabbar.TabSegment
+                    android:id="@+id/tabs_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:ts_normal_color="@color/public_subtitle"
+                    app:ts_selected_color="@color/public_big_title"
+                    app:ts_has_indicator="false"
+                    app:ts_mode="scrollable"
+                    android:textSize="@dimen/public_title"
+                    app:ts_select_textSize="18sp"
+                    android:background="@color/white"
+                    app:ts_typeface_provider="com.stepyen.commonsdk.utils.HomeTypefaceProvider"
+                    />
+
+
+<!--      提交按钮      -->
+            <com.stepyen.xui.widget.textview.ShapeTextView
+                    android:id="@+id/tv_WecharBindSetting"
+                    style="@style/PublicTextStyle.red.Commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="解除绑定"
+                    android:layout_marginTop="@dimen/public_margin"
+                    />
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"></Space>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/public_margin"
+                    android:orientation="horizontal"
+                    >
+
+                <com.stepyen.xui.widget.textview.ShapeTextView
+                        android:id="@+id/tv_home_left_commit"
+                        style="@style/PublicTextStyle.pink.Commit"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        tools:text="咨询"
+                        />
+
+                <Space
+                        android:layout_width="@dimen/public_margin"
+                        android:layout_height="match_parent"/>
+
+                <com.stepyen.xui.widget.textview.ShapeTextView
+                        android:id="@+id/tv_home_right_commit"
+                        style="@style/PublicTextStyle.red.Commit"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginHorizontal="0dp"
+                        android:layout_weight="1"
+                        tools:text="立即支付"
+                        />
+            </LinearLayout>
+
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"></Space>
+
+
+            <com.stepyen.xui.widget.textview.supertextview.OptionItem
+                    android:id="@+id/option_home_address"
+                    style="@style/OptionItemStyle.RightArrow"
+                    app:sLeftTextString="投保地区"
+                    app:sRightTextString="福建省 福州市 "
+                    />
+
+
+
+            <com.stepyen.xui.widget.radiogruop.RadioGroupPlus
+                    android:id="@+id/rgp_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:rgp_checkedButton="@id/public_radiobutton_id_alipay"
+                    android:background="@color/white"
+                    >
+
+                <com.stepyen.xui.widget.textview.supertextview.OptionItem
+                        android:id="@+id/option_home_alipay"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:sDividerLineType="bottom"
+                        app:sLeftIconHeight="30dp"
+                        app:sLeftIconWidth="30dp"
+                        app:sLeftIconRes="@drawable/ic_alipay"
+                        app:sLeftIconMarginLeft="0dp"
+                        app:sLeftTextColor="@color/public_big_title"
+                        app:sLeftTextSize="@dimen/public_subtitle"
+                        app:sLeftTopTextString="支付宝"
+                        app:sLeftViewGravity="left_center"
+                        app:sRadioButtonId="@id/public_radiobutton_id_alipay"
+                        app:sRightRadioButtonRes="@drawable/select_radio_button"
+                        app:sRightViewType="radioButton"
+                        app:sRightRadioButtonMarginRight="0dp"
+                        />
+
+
+                <com.stepyen.xui.widget.textview.supertextview.OptionItem
+                        android:id="@+id/option_home_wechat_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:sLeftIconHeight="30dp"
+                        app:sLeftIconRes="@drawable/ic_wechat"
+                        app:sLeftIconWidth="30dp"
+                        app:sLeftIconMarginLeft="0dp"
+                        app:sLeftTextColor="@color/public_big_title"
+                        app:sLeftTextSize="@dimen/public_subtitle"
+                        app:sLeftTopTextString="微信支付"
+                        app:sLeftViewGravity="left_center"
+                        app:sRadioButtonId="@id/public_radiobutton_id_wechat"
+                        app:sRightRadioButtonRes="@drawable/select_radio_button"
+                        app:sRightViewType="radioButton"
+                        app:sRightRadioButtonMarginRight="0dp"
+                        app:sDividerLineType="none"
+                        />
+
+            </com.stepyen.xui.widget.radiogruop.RadioGroupPlus>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+
+                <com.stepyen.xui.widget.imageview.RadiusImageView
+                        android:id="@+id/iv_focus_shop"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/public_margin"
+                        android:src="@color/public_image_error"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:riv_is_circle="true"
+                        />
+
+                <TextView
+                        android:id="@+id/tv_focus_shop_name"
+                        style="@style/TextStyle"
+                        android:layout_marginLeft="@dimen/public_margin"
+                        android:text="店铺名称"
+                        android:textColor="@color/public_spinner_title"
+
+                        android:textSize="@dimen/public_big_title"
+
+                        app:layout_constraintBottom_toTopOf="@+id/tv_home_address"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_focus_shop"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        app:layout_constraintVertical_chainStyle="packed"
+
+                        />
+
+                <ImageView
+                        android:id="@+id/iv_focus_shop_so_sign"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_silver_shop_title"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_focus_shop_name"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_focus_shop_name"
+                        app:layout_constraintTop_toTopOf="@+id/tv_focus_shop_name"
+                        />
+
+                <TextView
+                        android:id="@+id/tv_home_address"
+                        style="@style/TextStyle"
+                        android:layout_marginTop="4dp"
+                        android:text="0人关注"
+                        android:textColor="@color/public_subtitle"
+
+                        android:textSize="@dimen/public_explain"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_focus_shop_name"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_focus_shop_name"
+                        />
+
+
+                <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="13dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_gray_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

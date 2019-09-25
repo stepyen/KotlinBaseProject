@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.stepyen.kotlinbaseproject">
+        package="com.stepyen.kotlinbaseproject">
 
     <application
             android:name="com.stepyen.xframe.base.BaseApplication"
@@ -10,23 +10,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-
-
-
-        <activity android:name=".MainActivity">
+        <activity android:name=".mvp.ui.activity.CopyActivity"></activity>
+        <activity android:name=".mvp.ui.activity.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
+        <activity android:name=".mvp.ui.activity.LoginActivity" />
 
         <meta-data
                 android:name="com.stepyen.commonsdk.core.GlobalConfiguration"
-                android:value="ConfigModule"/>
+                android:value="ConfigModule" />
     </application>
 
 </manifest>

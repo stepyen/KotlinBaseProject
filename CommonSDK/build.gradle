@@ -1,11 +1,17 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion build_versions.target_sdk
     buildToolsVersion build_versions.build_tools
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    androidExtensions{
+        // 支持kotlin使用注解实现 Pracelable
+        experimental = true
     }
     defaultConfig {
         minSdkVersion build_versions.min_sdk

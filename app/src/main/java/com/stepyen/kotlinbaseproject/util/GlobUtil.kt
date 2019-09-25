@@ -1,10 +1,12 @@
 package com.stepyen.kotlinbaseproject.util
 
 import android.content.Context
+import android.os.Bundle
 import android.text.TextPaint
 import android.text.style.ClickableSpan
 import android.view.View
 import android.widget.LinearLayout
+import com.alibaba.android.arouter.launcher.ARouter
 import com.stepyen.xframe.http.imageloader.ImageLoader
 import com.stepyen.xframe.utils.XFrameUtils
 import com.stepyen.xui.widget.textview.supertextview.OptionItem
@@ -16,14 +18,24 @@ import com.stepyen.xutil.common.SpanUtils
  * description：
  *
  */
-class GlobUtil {
 
+fun navigation(path: String, context: Context? = null, bundle: Bundle? = null) {
+    var postcard = ARouter
+        .getInstance()
+        .build(path)
+        .with(bundle)
+    if (context == null) {
+        postcard.navigation()
+    } else {
+        postcard.navigation(context)
+    }
 }
 
 fun getImageLoader(context: Context): ImageLoader {
     val appComponent = XFrameUtils.obtainAppComponentFromContext(context)
     return appComponent.imageLoader()
 }
+
 
 
 fun checkVisibility(view: View) {

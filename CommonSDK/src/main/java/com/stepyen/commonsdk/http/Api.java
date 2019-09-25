@@ -33,4 +33,11 @@ public interface Api {
     String ERROR_USER_INCORRECT = "1001";
     String ERROR_PHONE_EXIST = "1019";
 
+
+    /**
+     * 图片基础地址
+     */
+    String APP_IMAGE = APP_DOMAIN + "sys/common/view/";
+
+
 }
