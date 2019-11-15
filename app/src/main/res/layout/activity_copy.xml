@@ -94,6 +94,9 @@
                     app:sRightTextString="福建省 福州市 "
                     />
 
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"></Space>
 
 
             <com.stepyen.xui.widget.radiogruop.RadioGroupPlus
@@ -184,18 +187,6 @@
 
                         />
 
-                <ImageView
-                        android:id="@+id/iv_focus_shop_so_sign"
-                        android:layout_width="17dp"
-                        android:layout_height="17dp"
-
-                        android:layout_marginLeft="10dp"
-                        android:src="@drawable/ic_silver_shop_title"
-                        app:layout_constraintLeft_toRightOf="@+id/tv_focus_shop_name"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_focus_shop_name"
-                        app:layout_constraintTop_toTopOf="@+id/tv_focus_shop_name"
-                        />
-
                 <TextView
                         android:id="@+id/tv_home_address"
                         style="@style/TextStyle"
@@ -222,6 +213,9 @@
                         />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
         </LinearLayout>
     </ScrollView>
 

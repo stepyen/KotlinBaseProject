@@ -7,9 +7,6 @@ import android.text.style.RelativeSizeSpan
 import com.stepyen.commonsdk.R
 import com.stepyen.commonsdk.extend.stringFormat
 import kotlin.Double as Double1
-
-
-
 /**
  * date：2019/8/16
  * author：stepyen
@@ -40,7 +37,7 @@ class MoneyConfig() {
             }
 
             val split = handleMoney().split("\\.")   // 3.12
-            for (i in 0 until split.size) {
+            for (i in split.indices) {
                 when (i) {
                     0->append(split[0])
                     1->append(".").append(SpannableString(split[1]).apply {
@@ -68,4 +65,5 @@ class MoneyConfig() {
             money.toInt().toString()
         }
     }
+
 }
